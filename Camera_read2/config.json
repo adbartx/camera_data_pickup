@@ -1,0 +1,47 @@
+{
+  "camera": {
+    "device_index": 1,
+    "resolution": [
+      640,
+      480
+    ]
+  },
+  "detection": {
+    "brightness_threshold": 200,
+    "blur_kernel": 11,
+    "morph_kernel": 5,
+    "min_roi_area": 500,
+    "max_roi_area": 50000,
+    "max_aspect_ratio": 5.0,
+    "padding": 10,
+    "max_regions": 1
+  },
+  "monitoring": {
+    "interval_seconds": 5,
+    "detection_mode": "static",
+    "log_heartbeat_seconds": 300,
+    "log_all_readings": false
+  },
+  "zones": {
+    "diode_1": {
+      "labels": [
+        "red",
+        "green"
+      ],
+      "status_map": {
+        "red": "error",
+        "green": "ok"
+      },
+      "model_path": "models/diode_1_knn.joblib",
+      "roi": [
+        263,
+        194,
+        400,
+        329
+      ]
+    }
+  },
+  "classifier": {
+    "n_neighbors": 3
+  }
+}
